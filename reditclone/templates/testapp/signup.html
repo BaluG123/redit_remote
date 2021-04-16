@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>corOna.com.. Signup</title>
+    <link rel="stylesheet" href="{% static "css/redit.css"%}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css"%}">
+    <style media="screen">
+      body{
+        background:#DCDCDC;
+        margin:100px 0px 0px 100px;
+        background: url({% static "images/ocean.jpg" %});
+        background-size: cover;
+        background-attachment: fixed;
+        font-weight:bold;
+        color: black;
+      }
+    .leftbar{
+      width:55%;
+      float:right;
+    }
+    .login-box{
+      width:45%;
+      float:left;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron" style="background:black;width:92%;border-radius:12px;">
+        <h1 style="color:white;">Cor<span style="color:red;">O</span>na </h1>
+
+      </div>
+
+    </div>
+    <div class="row" style="width:70%;padding:20px 40px 10px 10px;margin-left:100px;">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+      <h1 style="border-bottom:1px solid white;padding-bottom:10px;"id="signup"><small>Sign Up</small></h1>
+      <form class="form-group" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" name="" value="SignUp" style="margin-left:0px;width:260px;" class="btn btn-primary btn-sm">
+
+      </form>
+      <p>have an account ?</p>
+      <a href="/accounts/login" style="margin-left:0px;width:260px;" class="btn btn-success btn-sm">logIn</a>
+    </div>
+    </div>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

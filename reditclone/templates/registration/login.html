@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CorOna.com.. login</title>
+    <link rel="stylesheet" href="{% static "css/redit.css"%}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css"%}">
+    <style media="screen">
+      body{
+        background:#DCDCDC;
+        margin:100px 0px 0px 100px;
+        background: url({% static "images/ocean.jpg"%});
+        background-size: cover;
+        background-attachment: fixed;
+        font-weight:bold;
+        color: black;
+       }
+    .leftbar{
+      width:55%;
+      float:right;
+    }
+    .login-box{
+      width:45%;
+      float:left;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron" style="background:black;width:92%;">
+        <h1 style="color:white;">Cor<span style="color:red;">O</span>na </h1>
+
+      </div>
+
+    </div>
+    <!--
+    <div class="left-bar" style="margin:100px 0 20px 400px;padding:10px">
+      <p style="color:white;border-bottom:1px solid #3b5998;width:200px;font-size:30px;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16" style="color:#7B68EE;">
+  <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z"/>
+</svg> watch <span style="color:green;">n</span> joy </p>
+      <p> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-collection-play-fill" viewBox="0 0 16 16" style="color:orange;">
+  <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm6.258-6.437a.5.5 0 0 1 .507.013l4 2.5a.5.5 0 0 1 0 .848l-4 2.5A.5.5 0 0 1 6 12V7a.5.5 0 0 1 .258-.437z"/>
+</svg> watchnjoy helps you connect and share with the people in your life.</p>-->
+    <div class="row" style="width:70%;padding:20px 40px 10px 10px;margin-left:100px;">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12">
+      <h1 style="border-bottom:1px solid white;padding-bottom:10px;"id="signup"><small>Log in</small></h1>
+      <form class="form-group" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" name="" value="Login" style="margin-left:0px;width:260px;" class="btn btn-success btn-sm">
+
+      </form>
+        <p style="color:red;margin-left:70px;font-weight:normal;" ><i>new user.?</i> </p>
+      <a href="/signup" style="margin-left:0px;width:260px;margin-bottom:10px;" class="btn btn-primary btn-sm">Create Account</a>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
